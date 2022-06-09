@@ -1,0 +1,38 @@
+@mixin botones ($padding) {
+    
+    font-size: 1rem;
+    border-radius: .5em;
+    background-color: grey;
+    color: white  ;
+    padding: $padding;
+
+}
+
+
+.btn-mixin-small {
+@include botones(0)
+}
+.btn-mixin-medium  {
+@include botones(.2em .5em)
+}
+.btn-mixin-large {
+@include botones(.5em .75em)
+}
+
+@mixin colorBoton ($colorBoton) {
+    background-color: $colorBoton;
+    color: black;
+    
+}
+
+.btn-mixin-small {
+    @include colorBoton(black)
+}
+
+.btn-mixin-medium  {
+    @include colorBoton(blue)
+}
+
+.btn-mixin-large {
+    @include colorBoton (gold)
+}
